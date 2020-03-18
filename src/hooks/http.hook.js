@@ -17,6 +17,10 @@ export const useHttp = () => {
             setLoading(true)
             headers['Content-Type'] = 'application/json';
             const response = await fetch( url,{method, body, headers});
+            if(response.status === 204) {
+                setLoading(false)
+                return {message: 'Карточка удалена'}
+            }
             const data = await response.json();
 
             if(!response.ok){
