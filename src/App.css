@@ -4,7 +4,6 @@ html {
 
 .App {
   background-color: #6f6f6f;
-  height: 100vh;
   width: 100vw;
 }
 
@@ -87,4 +86,14 @@ html {
 
 .btn_wrapper a {
   cursor: pointer;
+}
+
+textarea.materialize-textarea {
+  min-height: 5rem;
+}
+
+.card-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
 }

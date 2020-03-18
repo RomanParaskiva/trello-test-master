@@ -35,16 +35,18 @@ const AuthPage = () =>{
                 auth.login(data.token, data.username)
                 history.push('/')
             }
-        } catch (e) { }
+        } catch (e) {
+            message(e)
+        }
     };
     const loginHandler = async () => {
         try {
             const data = await request(reqUri + '/users/login/', 'POST', {...form}, {Authorization: 'Bearer'});
-            console.log(data.username)
-            console.log(form.username)
             auth.login(data.token, form.username)
             history.push('/')
-        } catch (e) { }
+        } catch (e) {
+            message(e)
+        }
     }
     return  (
         <div className="auth_container black-text">
