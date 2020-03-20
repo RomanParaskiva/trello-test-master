@@ -42,8 +42,8 @@ const AddCardBlock = ({id}) => {
                 console.log(e)
             }
         } else {
-            history.push('/auth')
-        }
+            history.push('/')
+                    }
     }
 
     const closeNewCard = (event) => {

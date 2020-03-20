@@ -11,17 +11,19 @@ function App() {
   const routes = useRoutes()
   const { login, logout, username, token} = useAuth();
   const  isAuthenticated = !!token;
-  return (
-      <AuthContext.Provider value={{
-        login, logout, token, username, isAuthenticated }}>
-        <Router>
-          <div className="App">
-            {routes}
-          </div>
-        </Router>
-      </AuthContext.Provider>
 
-  );
+      return (
+          <AuthContext.Provider value={{
+              login, logout, token, username, isAuthenticated
+          }}>
+              <Router>
+                  <div className="App">
+                      {routes}
+                  </div>
+              </Router>
+          </AuthContext.Provider>
+
+      )
 }
 
 export default App;

@@ -5,6 +5,7 @@ html {
 .App {
   background-color: #6f6f6f;
   width: 100vw;
+  min-height: 100vh;
 }
 
 .df{
@@ -34,6 +35,22 @@ html {
 .card-wrapper{
   background-color: rgba(0, 0, 0, 0.48);
   cursor: pointer;
+
+}
+
+.card-wrapper.over {
+  border: 2px dashed #6f6f6f;
+}
+
+.card-wrapper.dragstart {
+  min-height: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dragenter {
+  padding-bottom: 30px;
 }
 
 .auth_container {

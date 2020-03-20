@@ -33,12 +33,13 @@ const AuthPage = () =>{
             if(data.username === form.username){
                 message('Пользователь создан');
                 auth.login(data.token, data.username)
-                history.push('/')
             }
         } catch (e) {
             message(e)
         }
     };
+
+
     const loginHandler = async () => {
         try {
             const data = await request(reqUri + '/users/login/', 'POST', {...form}, {Authorization: 'Bearer'});
